@@ -56,7 +56,7 @@ void Camera::onSelectFolder()
     QString newPath = QFileDialog::getExistingDirectory(this, "Select Directory", ui->lineEdit->text());
     if (!newPath.isEmpty()) {
         ui->lineEdit->setText(newPath);
+        m_imageSavingPath = newPath;
     }
-    m_imageSavingPath = newPath;
 }
 

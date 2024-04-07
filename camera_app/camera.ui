@@ -13,25 +13,25 @@
   <property name="windowTitle">
    <string>Camera</string>
   </property>
-  <widget class="QPushButton" name="displayButton">
+  <widget class="QPushButton" name="startStreamingButton">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>50</y>
-     <width>80</width>
+     <x>350</x>
+     <y>10</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Display</string>
+    <string>Start streaming</string>
    </property>
   </widget>
   <widget class="QPushButton" name="saveButton">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>80</y>
-     <width>80</width>
+     <x>350</x>
+     <y>70</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
@@ -46,7 +46,7 @@
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>110</y>
+     <y>10</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -58,7 +58,61 @@
     <iconset theme="folder"/>
    </property>
   </widget>
+  <widget class="QDateTimeEdit" name="dateTimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>10</y>
+     <width>194</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>241</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QVideoWidget" name="videoWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>331</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopStreamingButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>40</y>
+     <width>91</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Stop streaming</string>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header>qvideowidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
